@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+
 @RestController
 @RequestMapping("/employeepayrollservice")
 public class EmployeePayrollController {
@@ -35,3 +37,20 @@ public class EmployeePayrollController {
     }
 
 }
+
+
+/*
+Try with rest call where Response entity will return JSON data.
+
+CURL Calls for Testing
+
+• curl localhost:8080/employeepayrollservice/ -w "\n"
+• curl localhost:8080/employeepayrollservice/get/1 -w "\n"
+• curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa","salary":
+2000}' "http://localhost:8080/employeepayrollservice/create" -w "\n"
+• curl -X PUT -H "Content-Type: application/json" -d '{"name": "Lisa","salary": 2000}'
+"http://localhost:8080/employeepayrollservice/update" -w "\n"
+• curl -X DELETE -H "Content-Type: application/json"
+localhost:8080/employeepayrollservice/delete/1 -w "\n"
+
+ */
